@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="rww row mt-4 mb-5 w-100">
+  <div class="colfr col-lg-7 col-md-7 col-sm-12 ms-5">
+    <h3 class="sh ms-2">SHOPPING CART</h3><hr>
+  {% for cartitem in cart %}
+  <div class="rrw row  w-100">
+    <div class="col-lg-3 col-md-3 col-sm-12">
+      <img class="crtimg mt-2" src="{{cartitem.product.image.url}}" alt=""></h5>
+    </div>
+    <div class="col-lg-7 mt-2 mb-2">
+      <h5 class="pro mt-3">{{cartitem.product}}</h5>
+      <h6 class="des">{{cartitem.product.desc}}</h6>
+      <h3 class="det mt-5 mb-3" style="color: rgb(35, 83, 214);">DETAILS</h3>
+      <h6><span class="gc">●  processor:</span>{{cartitem.product.processor}}</h6>
+      <h6><span class="gc">●  storage:</span>{{cartitem.product.storage}}</h6>
+      <h6><span class="gc">●  operating system:</span>{{cartitem.product.os}}</h6>
+      <h6><span class="gc">●  display:</span>{{cartitem.product.display}}</h6>
+      <h6><span class="gc">●  graphic card: </span>{{cartitem.product.gc}}</h6>
+      <h6><span class="gc">●  memory:</span>{{cartitem.product.memory}}</h6>
+
+    </div>
+    <div class="col-lg-2">
+      <h4 class="pr mt-4">₹{{cartitem.product.price}}</h4>
+      <h4 class="qt mt-2"><a href="{% url 'cart:cancelcart' cartitem.product.id %}"
+        class="btn">-</a>{{cartitem.quantity}}<a href="{% url 'cart:addcart' cartitem.product.id %}" class="btn">+</a>
+    </h4>
+      <a href="{% url 'cart:fullremove' cartitem.product.id %}" class="cn mt-2">REMOVE ITEM</a>
+    </div>
+  </div><hr>
+  {% endfor %}
+  {% if cart %}
+  <a href="{% url 'lap:laps' %}" class="purch btn mt-3 pt-2 pb-2">
+    <h4 class="prc" style="color: rgb(29, 29, 255);">CONTINUE SHOPPING</h4>
+  </a>
+ 
+</div>
+<div class="to col-lg-5 ms-5 border">
+<div class="pp row border">
+<h3>ORDER SUMMARY</h3>
+</div>
+<div class="cc col-lg-12">
+  <h4 class="ds mt-3">DISCOUNT <span class="dss mt-3">-₹2,199</span></h4>
+  <div class="row mt-4 bg-secondary border">
+  <h4 class="TOT mt-2">TOTAL AMOUNT <span class="tt mt-2">₹{{total}} </span></h4>
+  </div>
+  <h5 class="sav">you will save ₹2,199 on this order</h5>
+</div>
+<a href="{% url 'cart:placeorder' %}" class="plac btn bg-primary pt-2 mb-3"><h4>Place Order</h4></a>
+{% else %}
+<a href="{% url 'lap:laps' %}"><h5 class="prpr">please purchase your products</h5></a>
+{% endif %}
+</div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

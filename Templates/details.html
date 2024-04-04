@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="conta container-fluid justify-content-center bg-light d-flex ">
+
+    <div class="crd card rounded-2" style="border:0;">
+        <div class="row w-100">
+            <div class="cd card border-0 bg-body mt-2 rounded">
+                <div class="rw row">
+                    <div class="col1 col-lg-6">
+                <img src="{{data.image.url}}" class="card-img-top rounded-2 ms-4" alt="...">
+
+                    </div>
+                    <div class="col2 col-lg-6">
+                        <div class="row">
+                        <div class="col-lg-12">
+                            <h5 class="diss pt-1 pb-1 ps-1"><svg class="me-1" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M503-104q-24 24-57 24t-57-24L103-390q-23-23-23-56.5t23-56.5l352-353q11-11 26-17.5t32-6.5h286q33 0 56.5 23.5T879-800v286q0 17-6.5 32T855-456L503-104Zm196-536q25 0 42.5-17.5T759-700q0-25-17.5-42.5T699-760q-25 0-42.5 17.5T639-700q0 25 17.5 42.5T699-640ZM446-160l353-354v-286H513L160-446l286 286Zm353-640Z"/></svg>Get Flat $2199.00 cashback</h5>
+                        </div>
+                        <h3>{{data.name}}</h3>
+                        <h6>{{data.desc}}</h6><hr>
+                        <h5 class="sel mb-3 mt-2">Selected Configurations</h5>
+                        <h6><span class="gc">● processor:</span>{{data.processor}}</h6>
+                        <h6><span class="gc">●  storage:</span>{{data.storage}}</h6>
+                        <h6><span class="gc">●  operating system:</span>{{data.os}}</h6>
+                        <h6><span class="gc">●  display:</span>{{data.display}}</h6>
+                        <h6><span class="gc">●  graphic card: </span>{{data.gc}}</h6>
+                        <h6><span class="gc">●  memory:</span>{{data.memory}}</h6>
+                        <h3 class="pr" style="color: rgb(14, 155, 38);">₹ {{data.price}}</h3>
+                        <h5><span class="gc">●  stock:</span>{{data.stock}}</h5>
+                        <div class="card-body">
+                            {% if data.stock >= 1 %}
+                            <a href="{% url 'cart:addcart' data.id %}" class="car btn btn-primary me-2 ps-2 pt-2 pb-2 pe-2"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                                    viewBox="0 -960 960 960" width="24">
+                                    <path
+                                        d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
+                                </svg>ADD TO CART</a>
+                            {% else %}
+                            <span>
+                                <h3 class="out" style="color: red;">out of stock</h3>
+                            </span>
+                            {% endif %}
+        
+                        </div>
+                        <div class="colget col-lg-12">
+                        <h6 class="get pt-3 pb-3">Get up to ₹25,000 off on exchange of your current laptop</h6>
+                        </div>
+                        <div class="collas mt-2 col-lg-12">
+                        <h6>▼ Secure, Flexible Payment Options</h6>
+                        <h6>▼ Free & Fast Delivery</h6>
+                        <h6>▼ Call 1800-108-4746 for GST Billing</h6>
+                        <h6>▼ HP Advantage - Best prices & services for Businesses</h6>
+                        </div>
+                        <h6 class="ca mt-3">category: {{data.category}}</h6>
+                        <h6>created date: {{data.created}}</h6>
+                        <h6 class="up mb-4">updated date: {{data.updated}}</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

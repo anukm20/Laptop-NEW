@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid mb-3">
+  <h1 class="hed mt-3">{{category.name}}</h1>
+</div>
+  <div class="card-group mb-3 d-flex justify-content-center">
+    {% for product in products %}
+    <a href="{% url 'lap:details' product.id %}">
+      <div class="cad shadow me-4 p-3 mb-5 mt-3">
+        <div class="colcare d-flex mb-2">
+          <span class="care ps-1 pt-1 pb-1">Care Pack Warranty:₹3999.00 OFF*</span>
+          </div>
+        <img src="{{product.image.url}}" height="250px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title mt-2">{{product.name}}</h6>
+          <h5 class="card-text" style="color: rgb(44, 159, 44);">${{product.price}}</h5>
+        </div>
+      </div>
+    </a>
+    {% empty %}
+    <h3 class="NT">product Not found!</h3>
+    {% endfor %}
+
+  </div>
+
+
+{% endblock %}

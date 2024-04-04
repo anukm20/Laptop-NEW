@@ -1,0 +1,416 @@
+body{
+    overflow-x: hidden;
+}
+.input-group .bttn {
+    margin-right: px;
+    width: 23vw;
+}
+
+.ser {
+    margin-right: 600px;
+}
+
+.cd img {
+    width: 32vw;
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+.cd {
+    width: 100vw;
+    height: 100vh;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.col2 {
+    margin-top: 20px;
+}
+
+.crd {
+    background-color: rgb(255, 255, 255);
+}
+
+.out {
+    margin-left: 220px;
+    margin-top: 30px;
+}
+
+.cad img {
+    width: 280px;
+}
+
+.card-group a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-group {
+    width: 97vw;
+    margin-left: 20px;
+}
+
+.car {
+    margin-left: 0px;
+}
+
+.hed {
+    text-align: center;
+}
+
+.carousel-item img {
+    height: 510px;
+
+}
+
+.nnv {
+    background-color: rgb(223, 223, 223);
+}
+
+.ot {
+    margin-right: 20px;
+}
+
+.lo {
+    margin-right: 10px
+}
+
+.ct a {
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+}
+
+.crt {
+    margin-left: 0px;
+}
+
+.caro1 {
+    background-color: rgb(174, 119, 245);
+}
+
+.caro2 {
+    background-color: rgb(119, 252, 130);
+}
+
+.caro3 {
+    background-color: black;
+}
+.om{
+    color: rgb(255, 255, 255);
+    margin-left: 140px;
+}
+.hhh{
+    color: white;
+}
+
+.ccont {
+    margin-top: 40px;
+    width: 100vw;
+}
+
+.col .lap2 {
+    color: rgb(0, 66, 119);
+    font-weight: 800;
+}
+
+.contt {
+    width: 100vw;
+}
+
+.snn {
+    background-color: rgb(53, 224, 224);
+}
+
+.snn1 {
+    background-color: rgb(139, 245, 245);
+}
+
+
+.sinu1 {
+    font-weight: 450;
+}
+
+.snup {
+    margin-left: 840px;
+}
+
+.pic1 {
+    width: 60px;
+    margin-left: 55px;
+}
+
+.pic2 {
+    width: 60px;
+    margin-left: 25px;
+}
+
+.ind {
+    margin-top: 25px;
+}
+
+.final {
+    margin: 340px;
+    margin-bottom: 30px;
+}
+
+.fncol {
+    margin-left: 90px;
+}
+
+.final h1 {
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+}
+
+.final p {
+    color: rgb(160, 160, 160);
+}
+
+.twit {
+    display: inline;
+    width: 3.5rem;
+    padding-left: 1.5rem;
+}
+
+.fb {
+    display: inline;
+    width: 3.5rem;
+    padding-left: 1.5rem;
+
+}
+
+.gith {
+    display: inline;
+    width: 3.5rem;
+    padding-left: 1.5rem;
+}
+
+.disc {
+    display: inline;
+    width: 3.5rem;
+    padding-left: 1.5rem;
+}
+
+.wm {
+    font-size: .75rem;
+    color: rgb(975 85 99);
+    padding-left: 400px;
+    margin-bottom: 50px;
+}
+
+.ar p {
+    margin-left: 230px;
+    margin-right: 260px;
+    text-align: center;
+    color: rgb(160, 160, 160);
+}
+
+.navbak {
+    background-color: rgb(51, 54, 66);
+}
+
+.at {
+    text-align: center;
+}
+
+.crtimg {
+    width: 250px;
+}
+
+.des {
+    color: rgb(102, 102, 102);
+    margin: auto;
+}
+
+.pro {
+    color: rgb(7, 7, 7);
+}
+
+.plac {
+    width: 230px;
+    height: 56px;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.fr {
+    font-weight: 400;
+}
+
+.imm img {
+    height: 590px;
+}
+
+.crt {
+    margin-left: 540px;
+    color: rgb(231, 11, 11);
+}
+
+.to {
+    width: 620px;
+    height: 340px;
+    margin-top: 41px;
+    margin-bottom: 300px;
+}
+
+.prpr {
+    margin-left: 625px;
+}
+
+.sav {
+    color: rgb(16, 150, 45);
+}
+
+.tt {
+    margin-left: 100px;
+    font-weight: 800;
+}
+
+.TOT {
+    font-weight: 900;
+}
+
+.pp {
+    font-weight: 700;
+}
+
+.pp h3 {
+    color: rgb(89, 90, 90);
+}
+
+.ds {
+    font-weight: 590;
+}
+
+.dss {
+    margin-left: 170px;
+    color: rgb(18, 167, 63);
+}
+
+.sub1 {
+    font-weight: 800;
+}
+.sub{
+    font-weight: 600;
+}
+.pp h3{
+    color: black;
+    font-weight: 450;
+}
+.sh{
+    font-weight: 400;
+}
+
+.cn{
+    color: rgb(36, 112, 255);
+    font-weight: 800;
+    text-decoration: none;
+}
+.prc{
+    font-size: large;
+}
+.pr{
+    font-weight: 900;
+}
+.hr1{
+    width: 42.4vw;
+}
+.my{
+    font-size: 23px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke:1px rgb(0, 0, 0);
+
+}
+.my::before{
+    content: attr(data-text);
+    position: absolute;
+    color: rgb(177, 0, 35);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+.my:hover::before{
+    width: 100%;
+}
+.iim:hover{
+    transform: scale(1.07);
+    z-index: 1;
+    transition: 1s;
+
+}
+.gc{
+    font-weight: 800;
+}
+.diss{
+    background-color: rgb(252, 255, 61);
+}
+.sel{
+    font-weight: 800;
+}
+.hr2{
+    width: 42.4vw;
+}
+.rw{
+    margin-left: 200px;
+}
+.colget{
+    background-color: rgb(238, 238, 238);
+    margin-left: 12px;
+}
+.rww{
+    margin-left: 40px;
+}
+.frm{
+    margin-left: 700px;
+}
+.login{
+    margin-left: 420px;
+}
+.lhd{
+    margin-left: 145px;
+}
+.colcare{
+    background-color: rgb(252, 255, 61);
+}
+.care{
+    font-size: 11px;
+}
+.opts{
+    background-color: rgb(144, 252, 162);
+    height: 55.28vh;
+}
+.pur{
+    background-color: rgb(181, 255, 193);
+    
+}
+.add{
+    margin-left: 50px;
+}
+.omm{
+    margin-left: 50px;
+    color: white;
+}
+.sup{
+    margin-right: 890px;
+}
+.adrw{
+    width: 40vw;
+    margin: auto;
+    display: flex;
+    margin-bottom: 200px;
+}
+.inp1{
+    width: 353px;
+    margin-top: 15px;
+    height: 46px;
+}
+.submi{
+    background-color: rgb(6, 146, 6);
+    margin-bottom: 5px;
+    color: white;
+}

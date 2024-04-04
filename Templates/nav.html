@@ -1,0 +1,61 @@
+{% load static %}
+<nav class="nnv navbar navbar-dark">
+  <div class="container-fluid p-0">
+    <span class="navbar-brand mb-0 mx-auto h1"></span>
+    <a class="nav-link active me-4" aria-current="page" href="{% url 'lap:laps' %}"><span class="my">MY LAPTOPS </span><svg class="imm mb-2" xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="30"><path d="M50-184.617q-12.768 0-21.383-8.615Q20-201.848 20-214.616q0-12.769 8.616-21.385 8.615-8.615 21.384-8.615h122.308V-280q-30.308 0-51.308-21t-21-51.307V-727.69q0-30.307 21-51.307 21-21 51.308-21h615.382q30.308 0 51.308 21t21 51.307v375.383q0 30.307-21 51.307-21 21-51.308 21v35.384h122.308q12.769 0 21.384 8.615 8.616 8.616 8.616 21.385 0 12.768-8.616 21.384-8.615 8.615-21.384 8.615H50.001ZM172.31-339.999h615.382q5.385 0 8.847-3.461 3.462-3.462 3.462-8.847V-727.69q0-5.385-3.462-8.847-3.462-3.462-8.847-3.462H172.309q-5.385 0-8.847 3.462Q160-733.075 160-727.69v375.383q0 5.385 3.462 8.847 3.462 3.461 8.847 3.461Zm-12.309 0V-739.999v400Z"/></svg></a>
+      <form class="d-flex" role="search" action="{% url 'searchapp:search' %}" method="GET">
+        <div class="input-group">
+        
+      <input class="bttn form-control" type="search" name="q" placeholder="What are you looking for?" aria-label="Search"><button class="btn btn-secondary ser" type="submit"><img src="{% static './images/search_white_24dp.svg' %}" alt=""></button>
+      
+      </div>
+      </form>
+      {% if user.is_authenticated %}           
+      <span class="us me-3 mt-2" style="color: rgb(0, 0, 0);">{{user}}</span>
+      <a href="{% url 'auth:logout' %}" class="ot btn btn-danger ps-3 pe-3  lgo " type="submit">logout</a>
+      {% else %}
+      <a href="{% url 'auth:register' %}" class=" btn btn-dark ps-3 pe-3 me-3" type="submit">sign in</a>
+      <a href="{% url 'auth:loginuser' %}" class="lo btn btn-dark ps-3 pe-3" type="submit">login</a>
+      {% endif %}
+  </div>
+</nav>
+
+
+
+
+
+<nav class="navbar navbar-expand-lg bg-light">  
+  <div class="container-fluid nv">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="ct navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active mt-1" href="{% url 'lap:home' %}">home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active mt-1" aria-current="page" href="{% url 'lap:laps' %}">Laptop</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mt-1" style="margin-right: 0px;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Category
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'lap:laps' %}">All products</a></li>
+            {% for link in links %}
+            <li><a class="dropdown-item" href="{{link.get_url}}">{{link.name}}</a></li>
+            {% endfor %} 
+          </ul>
+        </li>
+        <li>
+          <a class="sup nav-link active mt-1" aria-current="page" href="{% url 'lap:support' %}">Support</a>
+        </li>
+        {% if user.is_authenticated %}
+        <a class="crt" href="{% url 'cart:displaycart' %}"><span class="text text-danger me-1">{{cart_items_count}}</span><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg></a>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
